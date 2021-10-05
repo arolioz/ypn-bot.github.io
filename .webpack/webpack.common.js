@@ -21,6 +21,9 @@ module.exports = {
             clientsClaim: true,
             skipWaiting: true,
         }),
+        new CopyPlugin({
+            patterns: [{ from: 'public/robots.txt', to: 'robots.txt' }],
+        }),
     ],
     resolve: {
         extensions: ['.js'],
@@ -45,6 +48,13 @@ module.exports = {
                     },
                     'postcss-loader',
                 ],
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: '[contenthash][ext]',
+                },
             },
         ],
     },
