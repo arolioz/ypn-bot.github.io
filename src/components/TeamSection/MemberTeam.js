@@ -1,5 +1,6 @@
 import PropType from 'prop-types';
 import clsx from 'clsx';
+import useCheckMobileScreen from '../../hooks/useCheckMobileScreen';
 const MemberTeam = ({
     username,
     avatarURL,
@@ -7,6 +8,23 @@ const MemberTeam = ({
     positionFirstAvatar,
     socialMediaList,
 }) => {
+    const isMobile = useCheckMobileScreen();
+    if (isMobile) {
+        return (
+            <div className="flex items-center flex-col my-10 p-3">
+                <img
+                    className="rounded-full border-8 border-black"
+                    src={avatarURL}
+                    width="180"
+                    height="200"
+                    alt={username.toLowerCase()}
+                />
+                <h2 className="text-xl font-bold mt-4 text-center">
+                    {username}
+                </h2>
+            </div>
+        );
+    }
     return (
         <div
             className={clsx(
@@ -15,7 +33,7 @@ const MemberTeam = ({
             )}
         >
             <img
-                className={'rounded-full border-8 border-black '}
+                className="rounded-full border-8 border-black"
                 src={avatarURL}
                 width="250"
                 height="250"
@@ -37,16 +55,12 @@ const MemberTeam = ({
                         )}
                     />
                 </div>
-                <div
-                    className={
-                        'bg-gray-900 flex justify-around items-center flex-col h-60 w-64 py-5 rounded-3xl'
-                    }
-                >
+                <div className="bg-gray-900 flex justify-around items-center flex-col h-60 w-64 py-5 rounded-3xl">
                     <div className="flex justify-center items-center flex-col">
-                        <h1 className={'text-white font-bold text-2xl'}>
+                        <h1 className="text-white font-bold text-2xl">
                             {username}
                         </h1>
-                        <p className={'text-green-primary font-medium text-lg'}>
+                        <p className="text-green-primary font-medium text-lg">
                             {role}
                         </p>
                     </div>
@@ -65,13 +79,11 @@ const MemberTeam = ({
                                             <a
                                                 key={index}
                                                 href={urlRedirect}
-                                                className={
-                                                    'm-2 text-white duration-500'
-                                                }
+                                                className="m-2 text-white duration-500"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
-                                                <IconComponent size="25" />
+                                                <IconComponent className="text-2xl" />
                                             </a>
                                         );
                                     }

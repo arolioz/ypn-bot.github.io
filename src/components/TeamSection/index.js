@@ -34,37 +34,6 @@ const TeamMembers = [
         ],
     },
     {
-        username: 'Lil MARCROCK22',
-        avatarURL: 'https://i.imgur.com/pT4lf5u.png',
-        role: 'Developer',
-        socialMediaList: [
-            {
-                iconComponent: FaGithub,
-                urlRedirect: 'https://github.com/MARCROCK22',
-            },
-        ],
-    },
-    {
-        username: 'zPablo',
-        avatarURL: 'https://i.imgur.com/XfWdyfN.png',
-        role: 'Designer',
-        socialMediaList: [
-            {
-                iconComponent: FaYoutube,
-                urlRedirect:
-                    'https://www.youtube.com/channel/UC4wrBYPvkmnyWTwTa5rbH2w',
-            },
-            {
-                iconComponent: FaTwitch,
-                urlRedirect: 'https://www.twitch.tv/itzpabloo_x',
-            },
-            {
-                iconComponent: FaTwitter,
-                urlRedirect: 'https://twitter.com/zPablo_z',
-            },
-        ],
-    },
-    {
         username: 'Santi_24',
         avatarURL: 'https://i.imgur.com/8BM9PaS.png',
         role: 'Co-Owner',
@@ -81,6 +50,17 @@ const TeamMembers = [
             {
                 iconComponent: FaTwitch,
                 urlRedirect: 'https://www.twitch.tv/santi_24_yt',
+            },
+        ],
+    },
+    {
+        username: 'Lil MARCROCK22',
+        avatarURL: 'https://i.imgur.com/pT4lf5u.png',
+        role: 'Developer',
+        socialMediaList: [
+            {
+                iconComponent: FaGithub,
+                urlRedirect: 'https://github.com/MARCROCK22',
             },
         ],
     },
@@ -104,6 +84,27 @@ const TeamMembers = [
         ],
     },
     {
+        username: 'zPablo',
+        avatarURL: 'https://i.imgur.com/XfWdyfN.png',
+        role: 'Designer',
+        socialMediaList: [
+            {
+                iconComponent: FaYoutube,
+                urlRedirect:
+                    'https://www.youtube.com/channel/UC4wrBYPvkmnyWTwTa5rbH2w',
+            },
+            {
+                iconComponent: FaTwitch,
+                urlRedirect: 'https://www.twitch.tv/itzpabloo_x',
+            },
+            {
+                iconComponent: FaTwitter,
+                urlRedirect: 'https://twitter.com/zPablo_z',
+            },
+        ],
+    },
+
+    {
         username: 'jairosalinas220',
         avatarURL: 'https://i.imgur.com/nc4GCyi.png',
         role: 'Frontend Developer',
@@ -122,14 +123,29 @@ const TeamMembers = [
             },
         ],
     },
+    {
+        username: 'Deivid',
+        avatarURL: 'https://imgur.com/cckaAHt.png',
+        role: 'XD',
+        socialMediaList: [
+            {
+                iconComponent: FaTwitter,
+                urlRedirect: 'https://twitter.com/Drylozu',
+            },
+            {
+                iconComponent: FaGithub,
+                urlRedirect: 'https://github.com/Drylozu',
+            },
+            {
+                iconComponent: FaTwitch,
+                urlRedirect: 'https://www.twitch.tv/drylozu',
+            },
+        ],
+    },
 ];
 const TeamSection = () => {
     return (
-        <div
-            className={
-                'flex justify-around items-start flex-wrap px-20 py-10 bg-gray-500'
-            }
-        >
+        <div className="flex justify-around items-start flex-wrap px-20 py-10 bg-gray-500">
             {TeamMembers.map((TeamMembersProps, index) => (
                 <MemberTeam
                     key={index}

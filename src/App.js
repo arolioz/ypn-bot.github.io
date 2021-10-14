@@ -1,18 +1,15 @@
-import Navbar from './components/Navbar/Navbar';
-import HeroSection from './components/HeroSection';
-import FeactureSection from './components/FeatureSections';
-import TeamSection from './components/TeamSection';
-import StatsSection from './components/StatsSection';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { Router } from '@reach/router';
+import Home from './Pages/Home';
 const App = () => {
     return (
         <>
-            <Navbar />
-            <div className="flex flex-grow flex-col">
-                <HeroSection />
-                <FeactureSection />
-                <StatsSection />
-                <TeamSection />
+            <div className="flex flex-grow flex-col h-screen">
+                <Navbar />
+                <Router>
+                    <Home path="/" />
+                </Router>
             </div>
             <Footer />
         </>
