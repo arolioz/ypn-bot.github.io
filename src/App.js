@@ -5,7 +5,7 @@ import Home from './Pages/Home';
 const App = () => {
     return (
         <>
-            <div className="flex flex-grow flex-col h-screen">
+            <div className="flex flex-grow flex-col">
                 <Navbar />
                 <Router>
                     <Home path="/" />

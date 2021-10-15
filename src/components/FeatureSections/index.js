@@ -7,7 +7,7 @@ const feactureItems = [
         icon: GrEmoji,
         attachment:
             'https://cdn.discordapp.com/attachments/812742164454441013/871973574049669120/G2_Madge.png',
-        emojiName: ':PepoNoSeque:',
+        emojiName: ':PepeMadge:',
         title: 'Use emojis without the need for Nitro.',
         paragraph:
             'YPN takes care of replacing your attempts at emojis, to real ones, starting from your favorite emojis and the thousands of existing aliases',
@@ -18,17 +18,17 @@ const feactureItems = [
         attachment:
             'https://media.discordapp.net/attachments/832625514048258048/898578137196142612/kappa.png',
         emojiName: ':kappa:',
-        title: 'Use emojis without the need for Nitro.',
+        title: 'You decide what you show.',
         paragraph:
-            'Stickers? Yes, images. Now YPN can spoof stickers with your attempts. Being an image, who would say?',
+            'First your preferences, a journey through the aliases to the entire database and finally a result. With the search you can establish what you want to see first.',
     },
     {
         type: 'Fastest',
         icon: BsStopwatchFill,
         attachment:
             'https://cdn.discordapp.com/emojis/455866415841280030.png?size=96',
-        emojiName: ':PepoNoSeque:',
-        title: "You don't need Nitro to be fast",
+        emojiName: ':nitro:',
+        title: "You don't need Nitro to be fast...",
         paragraph:
             'Answers, searches and replacements. All in a system optimized for the best experience',
     },
