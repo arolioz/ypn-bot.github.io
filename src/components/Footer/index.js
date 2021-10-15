@@ -5,7 +5,7 @@ const FooterItems = [
         links: [
             {
                 text: 'Home',
-                path: 'home',
+                path: '/',
             },
             {
                 text: 'Privacy',
@@ -27,7 +27,7 @@ const FooterItems = [
             },
             {
                 text: 'Invite',
-                path: '...',
+                path: 'https://discord.com/oauth2/authorize?client_id=815662828253347881&scope=bot%20applications.commands&permissions=2684365824',
                 external: true,
             },
         ],
@@ -41,7 +41,7 @@ const Footer = () => {
                     Imagine having nitro
                 </p>
                 <p className="text-white text-lg opacity-90 mt-2">
-                    @YPN coorporation
+                    @YPN Inc.
                 </p>
             </div>
             {FooterItems.map((footerItem) => (

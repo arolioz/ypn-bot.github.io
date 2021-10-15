@@ -16,9 +16,11 @@ const HeroSection = () => {
                     YPN is a Discord Bot that allows users use emojis without
                     the need for Nitro.
                 </p>
-                <button className="px-8 py-3 text-2xl border-4 rounded-2xl lg:px-12 lg:py-4 lg:pb-6 lg:text-6xl lg:rounded-3xl text-green-primary lg:border-8 font-bold  bg-transparent border-green-primary focus:outline-none mt-5 duration-300 transform hover:scale-110 hover:text-white">
-                    Invite
-                </button>
+                <a href="https://discord.com/oauth2/authorize?client_id=815662828253347881&scope=bot%20applications.commands&permissions=2684365824">
+                    <button className="px-8 py-3 text-2xl border-4 rounded-2xl lg:px-12 lg:py-4 lg:pb-6 lg:text-6xl lg:rounded-3xl text-green-primary lg:border-8 font-bold  bg-transparent border-green-primary focus:outline-none mt-5 duration-300 transform hover:scale-110 hover:text-white">
+                        Invite
+                    </button>
+                </a>
             </div>
         </div>
     );

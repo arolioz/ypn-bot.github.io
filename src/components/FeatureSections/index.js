@@ -16,8 +16,8 @@ const feactureItems = [
         type: 'Search',
         icon: AiOutlineSearch,
         attachment:
-            'https://cdn.discordapp.com/attachments/812742164454441013/871973574049669120/G2_Madge.png',
-        emojiName: ':PepoNoSeque:',
+            'https://media.discordapp.net/attachments/832625514048258048/898578137196142612/kappa.png',
+        emojiName: ':kappa:',
         title: 'Use emojis without the need for Nitro.',
         paragraph:
             'Stickers? Yes, images. Now YPN can spoof stickers with your attempts. Being an image, who would say?',

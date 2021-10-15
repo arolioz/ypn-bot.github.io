@@ -126,7 +126,7 @@ const TeamMembers = [
     {
         username: 'Deivid',
         avatarURL: 'https://imgur.com/cckaAHt.png',
-        role: 'XD',
+        role: 'Pet Developer',
         socialMediaList: [
             {
                 iconComponent: FaTwitter,
