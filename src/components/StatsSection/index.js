@@ -2,9 +2,9 @@ import {
     FaHashtag,
     FaUsers,
     HiEmojiHappy,
-    DiWebplatform,
+    DiWebplatform
 } from 'react-icons/all';
-import React from 'react';
+import * as React from 'react';
 const statsItems = [
     {
         type: 'Channels',
@@ -12,7 +12,7 @@ const statsItems = [
             Math.random() * (1000 * 100 * 10 - 1000 * 100 * 2) + 1000 * 100 * 2
         ),
         icon: FaHashtag,
-        color: '#FCD34D',
+        color: '#FCD34D'
     },
     {
         type: 'Users',
@@ -20,7 +20,7 @@ const statsItems = [
             Math.random() * (1000 * 100 * 10 - 1000 * 100 * 2) + 1000 * 100 * 2
         ),
         icon: FaUsers,
-        color: '#6EE7B7',
+        color: '#6EE7B7'
     },
     {
         type: 'Emojis',
@@ -28,7 +28,7 @@ const statsItems = [
             Math.random() * (1000 * 100 * 10 - 1000 * 100 * 2) + 1000 * 100 * 2
         ),
         icon: HiEmojiHappy,
-        color: '#A5B4FC',
+        color: '#A5B4FC'
     },
     {
         type: 'WebHooks',
@@ -36,32 +36,34 @@ const statsItems = [
             Math.random() * (1000 * 100 * 10 - 1000 * 100 * 2) + 1000 * 100 * 2
         ),
         icon: DiWebplatform,
-        color: '#C4B5FD',
-    },
+        color: '#C4B5FD'
+    }
 ];
 const StatsSection = () => {
     return (
         <div>
-            <div className="flex justify-center items-center flex-wrap bg-gray-800">
-                {statsItems.map((statsItem) => (
+            <div className="flex flex-wrap items-center justify-center bg-gray-800">
+                {statsItems.map(StatsItem => (
                     <div
-                        key={statsItem.type}
-                        className="flex justify-center items-center flex-col px-10 py-10 lg:p-20"
+                        key={StatsItem.type}
+                        className="flex flex-col items-center justify-center px-10 py-10 lg:p-20"
                     >
-                        {React.createElement(statsItem.icon, {
-                            className: 'text-7xl lg:text-8xl',
-                            color: statsItem.color,
-                        })}
+                        {
+                            <StatsItem.icon
+                                className="text-7xl lg:text-8xl"
+                                color={StatsItem.color}
+                            />
+                        }
                         <div
-                            className="text-xl lg:text-2xl font-bold my-2"
+                            className="my-2 text-xl font-bold lg:text-2xl"
                             style={{
-                                color: statsItem.color,
+                                color: StatsItem.color
                             }}
                         >
-                            {statsItem.amount}
+                            {StatsItem.amount}
                         </div>
-                        <div className="text-white font-bold text-lg lg:text-xl">
-                            {statsItem.type}
+                        <div className="text-white text-lg font-bold lg:text-xl">
+                            {StatsItem.type}
                         </div>
                     </div>
                 ))}

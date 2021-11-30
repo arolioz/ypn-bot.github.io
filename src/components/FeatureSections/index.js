@@ -7,62 +7,57 @@ const feactureItems = [
         icon: GrEmoji,
         attachment:
             'https://cdn.discordapp.com/attachments/812742164454441013/871973574049669120/G2_Madge.png',
-        emojiName: ':PepeMadge:',
+        emojiName: ':PepoNoSeque:',
         title: 'Use emojis without the need for Nitro.',
         paragraph:
-            'YPN takes care of replacing your attempts at emojis, to real ones, starting from your favorite emojis and the thousands of existing aliases',
+            'YPN takes care of replacing your attempts at emojis, to real ones, starting from your favorite emojis and the thousands of existing aliases'
     },
     {
         type: 'Search',
         icon: AiOutlineSearch,
         attachment:
-            'https://media.discordapp.net/attachments/832625514048258048/898578137196142612/kappa.png',
-        emojiName: ':kappa:',
-        title: 'You decide what you show.',
+            'https://cdn.discordapp.com/attachments/812742164454441013/871973574049669120/G2_Madge.png',
+        emojiName: ':PepoNoSeque:',
+        title: 'Use emojis without the need for Nitro.',
         paragraph:
-            'First your preferences, a journey through the aliases to the entire database and finally a result. With the search you can establish what you want to see first.',
+            'Stickers? Yes, images. Now YPN can spoof stickers with your attempts. Being an image, who would say?'
     },
     {
         type: 'Fastest',
         icon: BsStopwatchFill,
-        attachment:
-            'https://cdn.discordapp.com/emojis/455866415841280030.png?size=96',
-        emojiName: ':nitro:',
-        title: "You don't need Nitro to be fast...",
+        attachment: 'https://cdn.discordapp.com/emojis/455866415841280030.png',
+        emojiName: ':PepoNoSeque:',
+        title: "You don't need Nitro to be fast",
         paragraph:
-            'Answers, searches and replacements. All in a system optimized for the best experience',
-    },
+            'Answers, searches and replacements. All in a system optimized for the best experience'
+    }
 ];
 const FeactureSection = () => {
     const [tabIndex, setTabIndex] = useState(1);
-    const handleSelect = (index) => {
+    const handleSelect = index => {
         setTabIndex(index);
     };
     return (
         <div className={'bg-gray-700 p-10'}>
             <div className="flex justify-evenly">
-                {feactureItems.map((feactureItem, index) => (
+                {feactureItems.map((FeactureItem, index) => (
                     <button
-                        key={feactureItem.type}
+                        key={FeactureItem.type}
                         className={clsx(
                             tabIndex === index ? 'text-blue-500' : 'text-white',
-                            'flex',
-                            'flex-col',
-                            'items-center'
+                            'center-container flex-col'
                         )}
                         onClick={() => handleSelect(index)}
                         role="button"
                     >
-                        <strong className="hidden font-bold text-xl lg:text-3xl lg:block mb-4">
-                            {feactureItem.type}
+                        <strong className="hidden mb-4 text-xl font-bold lg:block lg:text-3xl">
+                            {FeactureItem.type}
                         </strong>
-                        {React.createElement(feactureItem.icon, {
-                            className: 'text-4xl lg:text-6xl',
-                        })}
+                        {<FeactureItem.icon className="text-4xl lg:text-6xl" />}
                     </button>
                 ))}
             </div>
-            <div className="bg-white h-0.5 my-8 rounded-xl"></div>
+            <div className="my-8 h-0.5 bg-white rounded-xl"></div>
             <div>
                 {feactureItems.map((feactureItem, index) => (
                     <div
@@ -74,24 +69,20 @@ const FeactureSection = () => {
                         )}
                     >
                         <div className="hidden flex-col items-center lg:flex">
-                            <img
-                                src={feactureItem.attachment}
-                                width="150"
-                                height="150"
-                            />
-                            <h2 className="text-white text-xl font-medium mt-5">
+                            <img src={feactureItem.attachment} width={150} />
+                            <h2 className="mt-5 text-white text-xl font-medium">
                                 {feactureItem.emojiName}
                             </h2>
                         </div>
-                        <div className="flex items-center flex-col text-white">
-                            <h2 className="text-xl mb-2 font-medium text-center lg:text-3xl">
+                        <div className="center-container flex-col text-white">
+                            <h2 className="mb-2 text-center text-xl font-medium lg:text-3xl">
                                 {feactureItem.title}
                             </h2>
-                            <p className="text-xs text-center max-w-sm opacity-90 font-semibold lg:text-base">
+                            <p className="max-w-sm text-center text-xs font-semibold opacity-90 lg:text-base">
                                 {feactureItem.paragraph}
                             </p>
                             <a
-                                className="mt-5 bg-green-500 hover:bg-green-800 px-16 py-1 font-bold bg-opacity-75 text-lg"
+                                className="mt-5 px-16 py-1 text-lg font-bold bg-green-500 hover:bg-green-800 bg-opacity-75"
                                 href="#"
                             >
                                 Try i!

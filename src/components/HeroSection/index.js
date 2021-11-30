@@ -1,26 +1,39 @@
+import Link from '../Link';
 const HeroSection = () => {
     return (
-        <div className="flex justify-evenly items-center bg-gray-900 py-10">
+        <div className="flex items-center justify-evenly py-10 bg-gray-900">
             <img
                 className="hidden lg:block"
                 src="https://cdn.discordapp.com/attachments/812742164454441013/871435345823150150/WumpusRig.png"
-                alt="15"
+                alt="YPN-LOGO"
                 width="400"
                 height="400"
             />
-            <div className="flex justify-center items-center flex-col">
-                <h1 className="text-white text-4xl max-w-xs lg:text-6xl lg:max-w-lg  font-extrabold mb-5 text-center">
-                    Imagine having nitro
+            <div className="center-container flex-col">
+                <h1 className="mb-5 text-center text-white text-4xl font-extrabold tracking-wide lg:text-6xl">
+                    <span className="block">IMAGINE HAVING</span>
+                    <span className="block mt-1 text-conifer-500">NITRO</span>
                 </h1>
-                <p className="text-gray-200 text-sm max-w-xs lg:text-lg lg:max-w-md font-bold text-center">
+                <p className="max-w-xs text-center text-gray-200 text-sm font-bold lg:max-w-md lg:text-lg">
                     YPN is a Discord Bot that allows users use emojis without
                     the need for Nitro.
                 </p>
-                <a href="https://discord.com/oauth2/authorize?client_id=815662828253347881&scope=bot%20applications.commands&permissions=2684365824">
-                    <button className="px-8 py-3 text-2xl border-4 rounded-2xl lg:px-12 lg:py-4 lg:pb-6 lg:text-6xl lg:rounded-3xl text-green-primary lg:border-8 font-bold  bg-transparent border-green-primary focus:outline-none mt-5 duration-300 transform hover:scale-110 hover:text-white">
+                <div className="center-container flex-col mt-6 lg:flex-row lg:space-x-10">
+                    <Link
+                        to="https://discord.com/oauth2/authorize?client_id=815662828253347881&scope=bot%20applications.commands&permissions=2684365824"
+                        isExternalLink={true}
+                        className="px-6 py-2.5 text-conifer-100 text-xl font-bold bg-transparent border-4 border-conifer rounded-lg hover:shadow-xl transform hover:scale-110 duration-300 lg:px-10 lg:py-3 lg:text-2xl"
+                    >
                         Invite
-                    </button>
-                </a>
+                    </Link>
+                    <Link
+                        to="https://discord.com/oauth2/authorize?client_id=815662828253347881&scope=bot%20applications.commands&permissions=2684365824"
+                        isExternalLink={true}
+                        className="my-5 px-6 py-2.5 text-conifer-100 text-xl font-bold bg-transparent border-4 border-conifer rounded-lg hover:shadow-xl transform hover:scale-110 duration-300 lg:my-0 lg:px-10 lg:py-3 lg:text-2xl"
+                    >
+                        Support
+                    </Link>
+                </div>
             </div>
         </div>
     );

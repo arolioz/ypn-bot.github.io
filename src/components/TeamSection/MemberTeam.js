@@ -6,20 +6,20 @@ const MemberTeam = ({
     avatarURL,
     role,
     positionFirstAvatar,
-    socialMediaList,
+    socialMediaList
 }) => {
     const isMobile = useCheckMobileScreen();
     if (isMobile) {
         return (
-            <div className="flex items-center flex-col my-10 p-3">
+            <div className="flex flex-col items-center my-10 p-3">
                 <img
-                    className="rounded-full border-8 border-black"
+                    className="border-8 border-black rounded-full"
                     src={avatarURL}
                     width="180"
                     height="200"
                     alt={username.toLowerCase()}
                 />
-                <h2 className="text-xl font-bold mt-4 text-center">
+                <h2 className="mt-4 text-center text-xl font-bold">
                     {username}
                 </h2>
             </div>
@@ -28,15 +28,15 @@ const MemberTeam = ({
     return (
         <div
             className={clsx(
-                'flex justify-around items-center my-10',
+                'flex items-center justify-around my-10',
                 positionFirstAvatar && 'flex-row-reverse'
             )}
         >
             <img
-                className="rounded-full border-8 border-black"
+                className="border-8 border-black rounded-full"
                 src={avatarURL}
-                width="250"
-                height="250"
+                width="230"
+                height="230"
                 alt={username.toLowerCase()}
             />
             <div
@@ -45,7 +45,7 @@ const MemberTeam = ({
                     positionFirstAvatar && 'flex-row-reverse'
                 )}
             >
-                <div className="w-6 overflow-hidden inline-block">
+                <div className="inline-block w-6 overflow-hidden">
                     <div
                         className={clsx(
                             'h-10 bg-gray-900 transform',
@@ -55,23 +55,23 @@ const MemberTeam = ({
                         )}
                     />
                 </div>
-                <div className="bg-gray-900 flex justify-around items-center flex-col h-60 w-64 py-5 rounded-3xl">
-                    <div className="flex justify-center items-center flex-col">
-                        <h1 className="text-white font-bold text-2xl">
+                <div className="flex flex-col items-center justify-around py-5 w-64 h-60 bg-gray-900 rounded-3xl">
+                    <div className="center-container flex-col">
+                        <h1 className="text-white text-xl font-bold">
                             {username}
                         </h1>
-                        <p className="text-green-primary font-medium text-lg">
+                        <p className="text-conifer text-base font-medium">
                             {role}
                         </p>
                     </div>
                     <div>
                         {socialMediaList && (
-                            <div className="mt-px flex justify-center items-center">
+                            <div className="center-container mt-px">
                                 {socialMediaList.map(
                                     (
                                         {
                                             iconComponent: IconComponent,
-                                            urlRedirect,
+                                            urlRedirect
                                         },
                                         index
                                     ) => {
@@ -83,7 +83,7 @@ const MemberTeam = ({
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
-                                                <IconComponent className="text-2xl" />
+                                                <IconComponent className="text-xl" />
                                             </a>
                                         );
                                     }
@@ -101,6 +101,6 @@ MemberTeam.propTypes = {
     avatarURL: PropType.string.isRequired,
     role: PropType.string.isRequired,
     positionFirstAvatar: PropType.bool.isRequired,
-    socialMediaList: PropType.array,
+    socialMediaList: PropType.array
 };
 export default MemberTeam;

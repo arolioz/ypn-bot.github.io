@@ -24,9 +24,9 @@ const Link = ({ children, isExternalLink, isSameTab, to, ...props }) => {
 
 Link.propTypes = {
     children: PropTypes.node.isRequired,
-    className: PropTypes.string.isRequired,
+    className: PropTypes.string,
     isExternalLink: PropTypes.bool.isRequired,
     isSameTab: PropTypes.bool,
-    to: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired
 };
 export default Link;
