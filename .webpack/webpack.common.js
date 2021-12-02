@@ -12,28 +12,28 @@ module.exports = {
             favicon: 'public/favicon.ico',
             filename: 'index.html',
             meta: {
-                viewport: 'width=device-width,initial-scale=1',
+                viewport: 'width=device-width,initial-scale=1'
             },
             title: 'YPN',
-            hash: true,
+            hash: true
         }),
         new GenerateSW({
             clientsClaim: true,
-            skipWaiting: true,
+            skipWaiting: true
         }),
         new CopyPlugin({
-            patterns: [{ from: 'public/robots.txt', to: 'robots.txt' }],
-        }),
+            patterns: [{ from: 'public/robots.txt', to: 'robots.txt' }]
+        })
     ],
     resolve: {
-        extensions: ['.js'],
+        extensions: ['.js']
     },
     module: {
         rules: [
             {
                 test: /\.js?$/i,
                 exclude: /node_modules/,
-                use: ['babel-loader'],
+                use: ['babel-loader']
             },
             {
                 test: /\.css$/i,
@@ -43,19 +43,19 @@ module.exports = {
                         loader: 'css-loader',
                         options: {
                             importLoaders: 1,
-                            sourceMap: true,
-                        },
+                            sourceMap: true
+                        }
                     },
-                    'postcss-loader',
-                ],
+                    'postcss-loader'
+                ]
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: '[contenthash][ext]',
-                },
-            },
-        ],
-    },
+                    filename: '[contenthash][ext]'
+                }
+            }
+        ]
+    }
 };
