@@ -1,0 +1,15 @@
+{
+    "name": "YPN Discord Bot",
+    "short_name": "YPN",
+    "description": "YPN is a Discord Bot that allows users use emojis without the need for Nitro.",
+    "background_color":"#ffffff",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "./public/favicon.ico",
+            "sizes": "any",
+            "type": "image/svg"
+        }
+    ],
+    "start_url": "/"
+}
