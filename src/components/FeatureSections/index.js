@@ -26,14 +26,14 @@ const feactureItems = [
         type: 'Fastest',
         icon: BsStopwatchFill,
         attachment: 'https://cdn.discordapp.com/emojis/455866415841280030.png',
-        emojiName: ':PepoNoSeque:',
+        emojiName: ':Nitro:',
         title: "You don't need Nitro to be fast",
         paragraph:
             'Answers, searches and replacements. All in a system optimized for the best experience'
     }
 ];
 const FeactureSection = () => {
-    const [tabIndex, setTabIndex] = useState(1);
+    const [tabIndex, setTabIndex] = useState(0);
     const handleSelect = index => {
         setTabIndex(index);
     };
@@ -43,8 +43,9 @@ const FeactureSection = () => {
                 {feactureItems.map((FeactureItem, index) => (
                     <button
                         key={FeactureItem.type}
+                        aria-label={FeactureItem.type}
                         className={clsx(
-                            tabIndex === index ? 'text-blue-500' : 'text-white',
+                            tabIndex === index ? 'text-conifer' : 'text-white',
                             'center-container flex-col'
                         )}
                         onClick={() => handleSelect(index)}
@@ -53,7 +54,7 @@ const FeactureSection = () => {
                         <strong className="hidden mb-4 text-xl font-bold lg:block lg:text-3xl">
                             {FeactureItem.type}
                         </strong>
-                        {<FeactureItem.icon className="text-4xl lg:text-6xl" />}
+                        {<FeactureItem.icon className="text-4xl lg:text-5xl" />}
                     </button>
                 ))}
             </div>
@@ -69,7 +70,11 @@ const FeactureSection = () => {
                         )}
                     >
                         <div className="hidden flex-col items-center lg:flex">
-                            <img src={feactureItem.attachment} width={150} />
+                            <img
+                                src={feactureItem.attachment}
+                                width={150}
+                                alt={`${feactureItem.type}-image`}
+                            />
                             <h2 className="mt-5 text-white text-xl font-medium">
                                 {feactureItem.emojiName}
                             </h2>
@@ -82,7 +87,7 @@ const FeactureSection = () => {
                                 {feactureItem.paragraph}
                             </p>
                             <a
-                                className="mt-5 px-16 py-1 text-lg font-bold bg-green-500 hover:bg-green-800 bg-opacity-75"
+                                className="mt-5 px-12 py-2 text-conifer-100 text-lg font-bold bg-transparent border-4 border-conifer rounded-lg hover:shadow-xl transform hover:scale-110 duration-300"
                                 href="#"
                             >
                                 Try i!

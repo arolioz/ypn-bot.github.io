@@ -1,7 +1,6 @@
 import {
     FaTwitter,
     FaGithub,
-    FaSpotify,
     FaYoutube,
     FaSteam,
     FaFacebook,
@@ -19,17 +18,12 @@ const TeamMembers = [
                 urlRedirect: 'https://github.com/socram03'
             },
             {
-                iconComponent: FaSpotify,
-                urlRedirect:
-                    'https://open.spotify.com/user/21mh6wzeapsm6xbrh5m54x25y'
-            },
-            {
                 iconComponent: FaTwitter,
                 urlRedirect: 'https://twitter.com/Promedio_Person'
             },
             {
                 iconComponent: FaFacebook,
-                urlRedirect: 'https://www.facebook.com/2152646208345494'
+                urlRedirect: 'https://facebook.com/2152646208345494'
             }
         ]
     },
@@ -41,7 +35,7 @@ const TeamMembers = [
             {
                 iconComponent: FaYoutube,
                 urlRedirect:
-                    'https://www.youtube.com/channel/UCFqnn2G2p5cuxBsfOOgpVNg'
+                    'https://youtube.com/channel/UCFqnn2G2p5cuxBsfOOgpVNg'
             },
             {
                 iconComponent: FaGithub,
@@ -49,7 +43,7 @@ const TeamMembers = [
             },
             {
                 iconComponent: FaTwitch,
-                urlRedirect: 'https://www.twitch.tv/santi_24_yt'
+                urlRedirect: 'https://twitch.tv/santi_24_yt'
             }
         ]
     },
@@ -91,11 +85,11 @@ const TeamMembers = [
             {
                 iconComponent: FaYoutube,
                 urlRedirect:
-                    'https://www.youtube.com/channel/UC4wrBYPvkmnyWTwTa5rbH2w'
+                    'https://youtube.com/channel/UC4wrBYPvkmnyWTwTa5rbH2w'
             },
             {
                 iconComponent: FaTwitch,
-                urlRedirect: 'https://www.twitch.tv/itzpabloo_x'
+                urlRedirect: 'https://twitch.tv/itzpabloo_x'
             },
             {
                 iconComponent: FaTwitter,
@@ -119,7 +113,7 @@ const TeamMembers = [
             },
             {
                 iconComponent: FaTwitch,
-                urlRedirect: 'https://www.twitch.tv/jairosalinas220'
+                urlRedirect: 'https://twitch.tv/jairosalinas220'
             }
         ]
     },
@@ -138,7 +132,7 @@ const TeamMembers = [
             },
             {
                 iconComponent: FaTwitch,
-                urlRedirect: 'https://www.twitch.tv/drylozu'
+                urlRedirect: 'https://twitch.tv/drylozu'
             }
         ]
     }

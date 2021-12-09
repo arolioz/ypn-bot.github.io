@@ -4,10 +4,12 @@ const HeroSection = () => {
         <div className="flex items-center justify-evenly py-10 bg-gray-900">
             <img
                 className="hidden lg:block"
-                src="https://cdn.discordapp.com/attachments/812742164454441013/871435345823150150/WumpusRig.png"
+                src="https://ik.imagekit.io/uvr0iirwp4i/WumpusRig_qQWxhh1BCg.png?updatedAt=1638826259624"
                 alt="YPN-LOGO"
                 width="400"
                 height="400"
+                srcSet="https://ik.imagekit.io/uvr0iirwp4i/WumpusRig_qQWxhh1BCg.png?updatedAt=1638826259624 400w, https://ik.imagekit.io/uvr0iirwp4i/WumpusRig_qQWxhh1BCg.png?updatedAt=1638826259624 800w"
+                sizes="(max-width: 400px) 100vw, 400px"
             />
             <div className="center-container flex-col">
                 <h1 className="mb-5 text-center text-white text-4xl font-extrabold tracking-wide lg:text-6xl">

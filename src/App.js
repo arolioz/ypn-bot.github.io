@@ -1,13 +1,13 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { Router } from '@reach/router';
-import { FaSpinner } from 'react-icons/fa';
 import { lazy, Suspense } from 'react';
+import Loading from './components/Loading';
 const Home = lazy(() => import('./pages/Home'));
 const App = () => {
     return (
         <>
-            <Suspense fallback={<FaSpinner className="animate-spin" />}>
+            <Suspense fallback={<Loading />}>
                 <div className="flex flex-col flex-grow">
                     <Navbar />
                     <Router>

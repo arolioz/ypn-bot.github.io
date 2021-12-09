@@ -52,6 +52,7 @@ const Navbar = () => {
                                     to={NavbarLink.path}
                                     key={NavbarLink.text}
                                     isExternalLink={!!NavbarLink.external}
+                                    aria-label={NavbarLink.text}
                                 >
                                     {<NavbarLink.icon />}
                                 </Link>
@@ -63,6 +64,7 @@ const Navbar = () => {
                                 to={NavbarLink.path}
                                 key={NavbarLink.text}
                                 isExternalLink={!!NavbarLink.external}
+                                aria-label={NavbarLink.text}
                             >
                                 {NavbarLink.text}
                             </Link>
@@ -93,6 +95,7 @@ const Navbar = () => {
                                     to={NavbarLink.path}
                                     key={NavbarLink.text}
                                     isExternalLink={!!NavbarLink.external}
+                                    aria-label={NavbarLink.text}
                                 >
                                     {<NavbarLink.icon />}
                                 </Link>
@@ -104,6 +107,7 @@ const Navbar = () => {
                                 to={NavbarLink.path}
                                 key={NavbarLink.text}
                                 isExternalLink={!!NavbarLink.external}
+                                aria-label={NavbarLink.text}
                             >
                                 {NavbarLink.text}
                             </Link>

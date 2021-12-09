@@ -13,20 +13,20 @@ module.exports = merge(common, {
     output: {
         uniqueName: 'YPN',
         path: path.resolve(__dirname, '../dist'),
-        filename: '[contenthash].js',
+        filename: '[contenthash].js'
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename: '[contenthash].css',
-            chunkFilename: '[id].css',
+            chunkFilename: '[id].css'
         }),
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin()
     ],
     optimization: {
         minimize: true,
         splitChunks: {
             chunks: 'all',
-            name: false,
+            name: false
         },
         minimizer: [
             new CssMinimizerPlugin({
@@ -34,34 +34,35 @@ module.exports = merge(common, {
                     preset: [
                         'default',
                         {
-                            discardComments: { removeAll: true },
-                        },
-                    ],
-                },
+                            discardComments: { removeAll: true }
+                        }
+                    ]
+                }
             }),
             new TerserPlugin({
                 terserOptions: {
                     parse: {
-                        ecma: 8,
+                        ecma: 8
                     },
                     compress: {
                         ecma: 5,
                         warnings: false,
                         comparisons: false,
-                        inline: 2,
+                        inline: 2
                     },
                     mangle: {
-                        safari10: true,
+                        safari10: true
                     },
                     keep_classnames: true,
                     keep_fnames: true,
                     output: {
                         ecma: 5,
                         comments: false,
-                        ascii_only: true,
-                    },
+                        ascii_only: true
+                    }
                 },
-            }),
-        ],
-    },
+                extractComments: false
+            })
+        ]
+    }
 });

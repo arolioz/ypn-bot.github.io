@@ -1,6 +1,7 @@
 import PropType from 'prop-types';
 import clsx from 'clsx';
 import useCheckMobileScreen from '../../hooks/useCheckMobileScreen';
+import Link from '../Link';
 const MemberTeam = ({
     username,
     avatarURL,
@@ -75,16 +76,21 @@ const MemberTeam = ({
                                         },
                                         index
                                     ) => {
+                                        const { hostname } = new URL(
+                                            urlRedirect
+                                        );
                                         return (
-                                            <a
+                                            <Link
+                                                isExternalLink={true}
+                                                to={urlRedirect}
                                                 key={index}
-                                                href={urlRedirect}
-                                                className="m-2 text-white duration-500"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
+                                                className="m-2 hover:text-conifer text-white"
+                                                aria-label={`${
+                                                    hostname.split('.')[0]
+                                                }-icon`}
                                             >
                                                 <IconComponent className="text-xl" />
-                                            </a>
+                                            </Link>
                                         );
                                     }
                                 )}

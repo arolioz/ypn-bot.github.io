@@ -1,7 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const { GenerateSW } = require('workbox-webpack-plugin');
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
@@ -11,15 +10,7 @@ module.exports = {
             template: 'public/index.html',
             favicon: 'public/favicon.ico',
             filename: 'index.html',
-            meta: {
-                viewport: 'width=device-width,initial-scale=1'
-            },
-            title: 'YPN',
-            hash: true
-        }),
-        new GenerateSW({
-            clientsClaim: true,
-            skipWaiting: true
+            title: 'ypn'
         }),
         new CopyPlugin({
             patterns: [{ from: 'public/robots.txt', to: 'robots.txt' }]
